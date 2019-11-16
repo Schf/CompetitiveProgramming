@@ -22,9 +22,17 @@ typedef vector<int> vi;
 #define ddcout if (DEBUG) cout
 #define ddprintf(fmt, ...) if (DEBUG) printf (fmt, ##__VA_ARGS__)
 
+const ll   MOD   =  1e+9+7;
+const ll   INF   =  0x3f3f3f3f3f3f3f3f;
+const int  INFi  =  0x3f3f3f3f;
+const ll   MAXN  =  1e+6+7;
+
 int main ()
 {
     int i, j;
     
+
+    end:
+    ddprintf ("Time elapsed %lf\n", 1.0 * clock() / CLOCKS_PER_SEC);
     return 0;
 }
