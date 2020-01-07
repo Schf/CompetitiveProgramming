@@ -34,28 +34,24 @@ int main ()
 {
     FASTIO;
     int i, j, n, t;
-    cin >> n >> t;
+    cin >> n >> t; --t;
     vi g (n), v (n);
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n - 1; i++)
     {
         cin >> g[i];
         g[i] += i;
     }
-    for (i = 0; true;)
+    dd trav (a, g)
+        cout << a << " ";
+    dd cout << endl;
+    for (i = 0; !v[i] && i != t;)
     {
-        if (v[i])
-        {
-            cout << "NO";
-            break;
-        }
-        if (i == t)
-        {
-            cout << "YES";
-            break;
-        }
         v[i] = 1;
+        dd cout << i << " " << g[i] << endl;
         i = g[i];
     }
+    if (i == t) cout << "YES";
+    else cout << "NO";
     cout << "\n";
 
     return 0;
