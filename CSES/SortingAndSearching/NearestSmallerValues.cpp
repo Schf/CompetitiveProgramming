@@ -1,0 +1,45 @@
+#pragma GCC optimize ("O2")
+#pragma GCC diagnostic ignored "-Wunused-variable"
+#pragma GCC diagnostic ignored "-Wunused-result"
+#pragma GCC diagnostic ignored "-Wunused-label"
+#pragma GCC diagnostic ignored "-Wsign-compare"
+
+#include <bits/stdc++.h>
+using namespace std;
+
+#define trav(a, A) for (auto & a : A)
+#define f first
+#define s second
+
+typedef long long ll;
+
+const ll MOD = 1e+9+7;
+const ll INFLL = 0x3f3f3f3f3f3f3f3f;
+const int INF = 0x3f3f3f3f;
+const ll MAXN = 1e+5+7;
+
+int main ()
+{
+	ios_base::sync_with_stdio (0);
+	cin.tie (0);
+	ll tc = 1; //cin >> tc;
+	while (tc--)
+	{
+		ll i, j, n;
+		cin >> n;
+		vector <ll> inp (n), alg (n, -1);
+		trav (a, inp) cin >> a;
+		for (i = 1; i < n; ++i)
+		{
+			ll cur = i - 1;
+			while (cur >= 0 && inp[cur] >= inp[i])
+				cur = alg[cur];
+			alg[i] = cur;
+		}
+		trav (a, alg) cout << a + 1 << ' ';
+		cout << '\n';
+	}
+
+	return 0;
+}
+

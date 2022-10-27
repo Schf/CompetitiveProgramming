@@ -3,7 +3,7 @@
 #pragma GCC diagnostic ignored "-Wunused-result"
 #pragma GCC diagnostic ignored "-Wunused-label"
 
-#define DEBUG 0
+#define DEBUG 1
 #define dd if (DEBUG)
 
 #include <bits/stdc++.h>
