@@ -6,8 +6,6 @@ using namespace std;
 #define s second
 
 typedef long long ll;
-typedef vector<ll> vll;
-typedef pair<ll, ll> pll;
 
 ll MOD = 1e+9+7;
 const ll INFLL = 0x3f3f3f3f3f3f3f3f;
