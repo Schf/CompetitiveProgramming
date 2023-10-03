@@ -9,7 +9,7 @@ typedef long long ll;
 typedef vector<ll> vll;
 typedef pair<ll, ll> pll;
 
-ll MOD = 1e+9+7;
+const ll MOD = 1e+9+7;
 const ll INFLL = 0x3f3f3f3f3f3f3f3f;
 const int INF = 0x3f3f3f3f;
 const ll MAXN = 1e+5+7;
