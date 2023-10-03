@@ -18,7 +18,7 @@ int main ()
 	cin.tie (0);
 	ll i, j, n;
 	string s;
-	cin << s;
+	cin >> s;
 	cout << "standard output";
 
 	return 0;
