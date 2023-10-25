@@ -11,7 +11,7 @@ int main() {
     if (memcmp(str + pos, ".......", 7) != 0)
       pos += strlen(str + pos), str[pos - 1] = ' ';
   }
-  str[pos-1] = '\0';
+  str[pos - 1] = '\0';
 
   puts(str);
 
