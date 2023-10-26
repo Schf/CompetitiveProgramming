@@ -1,0 +1,1 @@
+Kattis/magicsequence.cpp
