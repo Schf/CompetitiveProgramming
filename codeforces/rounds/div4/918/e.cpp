@@ -21,21 +21,19 @@ int main() {
   cin >> T;
   while (T--) {
     cin >> n;
-    vll a(n + 2);
-    for (i = 2; i < n + 2; ++i)
-      cin >> a[i], a[i] += a[i - 2];
-    for (i = 0; i < a.size(); ++i)
-      cout << a[i] << ' ';
-    cout << '\n';
-    for (i = 2; i < n + 2; ++i)
-      for (j = i + 1; j < n + 2; ++j)
-        if (a[j & ~1] - a[i + (i & 1) - 2] == a[j - !(j & 1)] - a[(i | 1) - 2])
-          cout << "YES: <" << i << ' ' << (i + (i & 1)) << ' ' << (i | 1)
-               << "> <" << j << ' ' << (j & ~1) << ' ' << (j - !(j & 1)) << "> "
-               << a[j & ~1] - a[i + (i & 1) - 2] << ' '
-               << a[j - !(j & 1)] - a[(i | 1) - 2] << "\n",
-              i = n + 10, j = n + 10;
-    if (i <= n + 7)
+    vll a(n);
+    trav(e, a) cin >> e;
+    for (i = 1; i < n; ++i)
+      a[i] = a[i - 1] + (1 - 2 * (i & 1)) * a[i];
+    set<ll> x;
+    for (i = 0; i < n; ++i)
+      if (a[i] == 0 || x.count(a[i]))
+        break;
+      else
+        x.insert(a[i]);
+    if (i < n)
+      cout << "YES\n";
+    else
       cout << "NO\n";
   }
 
