@@ -1,7 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define trav(a, A) for (auto &a : A)
 #define f first
 #define s second
 
